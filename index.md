@@ -15,8 +15,8 @@
 
 | **Akteur** | **Definition** |
 | :------ | :----- |
-| Admin | Der Administrator mit allen Berechtigungen und Einstellung der Zugriffsberechtigungen |
-| Benutzer | Angemeldeter Benutzer mit grundlegenden Berechtigungen |
+| Admin | Der Administrator umfasst alle Berechtigungen und die Einstellung der Zugriffsberechtigungen |
+| Benutzer | Angemeldeter Benutzer mit grundlegenden Berechtigungen. Kann Messstationen hinzufügen oder löschen |
 | Zuschauer | Angemeldeter Benutzer mit wenigen Berechtigung alleinig zum anschauen der Informationen |
 
 
@@ -31,18 +31,18 @@
 
 | **Name**| **In meiner Rolle als**...|   ...**möchte ich**...   | ..., **so dass**... | **Erfüllt, wenn**... | **Priorität**   |
 |:-----|:----------:|:-------------------|:-------------|:---------|:----------------|
-| Authentifizierung |Benutzer| meine Identität bestätigt bekomme | ich Handlungen unter den Benutzer tätigen kann | Die Daten des Benutzers angezeigt werden | Muss |
-| Antrag stellen | Benutzer | Einen Bauantrag in meinem Namen stellen | ich lernen kann | Datensatz erfolgreich in die Datenbank eingefügt wird | Muss |
-| Vermessung beantragen | Benutzer | Einen Termin für die Vermessung eines Grundstücks belegen | Dieser Termin festgelegt ist | Datensatz erfolgreich in die Datenbank eingefügt wird | Muss |
-| Beratung Termin | Benutzer | Einen Termin für ein Gespräch oder Beratung belegen | Dieser Termin festgelegt ist | Datensatz erfolgreich in die Datenbank eingefügt wird | Muss |
-| Projekte ansehen | Benutzer | Anzeigen aller öffentlichen Bauprojekte des Bauamts | ich lernen kann | Daten angezeigt werden | Muss |
-| Informationen ansehen | Benutzer | Anzeigen der Information für die behördlichen Formalitäten | ich lernen kann | Daten angezeigt werden | Muss |
-| Termin einsehen | Mitarbeiter | Das der Mitarbeiter einsicht auf alle Termine hat | ich lernen kann | Daten angezeigt werden | Muss |
-| Antrag einsehen | Mitarbeiter | Das der Mitarbeiter einsicht auf alle Bauanträge hat | ich lernen kann | Daten angezeigt werden | Muss |
-| Termin bestätigen | Mitarbeiter | Das der Mitarbeiter einen Termin bestätigen | Der Termin festgelegt ist | Termin ist als bestätigt in der Datenbank eingetragen | Muss |
-| Antrag bearbeiten | Mitarbeiter | Das der Mitarbeiter einen gestellten Bauantrag abarbeiten kann und danach diesen annehmen oder ablehnen kann. | Der Bauantrag bearbeitet wurde | Bauantrag ist als abgearbeitet in der Datenbank eingetragen | Sollte |
-| Projekt hinzufügen | Mitarbeiter | Das der Mitarbeiter ein öffentliches Projekt hinzufügen kann | Dieses Projekt bei den öffentlichen Bauprojekten angezeigt wird | Daten angezeigt werden | Optional |
-| Projekt bearbeiten | Mitarbeiter | Das der Mitarbeiter ein öffentliches Projekt bearbeiten und anpassen kann | Daten geändert werden können oder hinzugefügt werdeb können | Daten geändert oder hinzugefügt werden | Optional |
+| Chlorid und Ionen |Benutzer| Daten zu Chloridwerten und weiteren Ionen abrufen | Ich diese auf einer Webseite in einer bestimmten Darstellung sehen kann | Die Messwerte angezeigt werden | Muss |
+| Hydrologische Daten | Benutzer | Möchte ich Daten wie Wasserstand und Fließgeschwindigkeit abrufen kann  | Ich diese Informationen angezeigt bekomme zum analysieren | Die Daten angezeigt werden | Muss |
+| Kenngrößen | Benutzer | Kenngrößen wie Temperatur und PH-Werte überwachen | um eventuelle Umweltprobleme frühzeitig zu erkennen | Die Messwerte angezeigt werden | Muss |
+| Metalle | Benutzer | Messdaten zu Metallen wie Blei oder Quecksilber abrufen können | um mögliche Verschmutzungen zu analysieren | Die Messwerte angezeigt werden | Muss |
+| Nährstoffe | Benutzer | Daten zu Nährstoffen wie Stickstoff oder Phosphor abrufen | um den Einfluss auf das Ökosystem zu bewerten | Die Messwerte angezeigt werden | Muss |
+| Summenparameter | Benutzer | Daten wie chemischen und biologischen Sauerstoffbedarf abrufen | um die organische Verschmutzung des Flusses zu analysieren | Die Messwerte angezeigt werden | Muss |
+| Rollenvergabe | Admin | Benutzern eine Rolle zuweisen können | um diese in in ihren Berechtigungen ein zu schränken | Daten angezeigt werden | Muss |
+| Messstation erstellen | Benutzern | eine neue Messstation hinzufügen können | man diese verwenden kann | Eine neue Messstation erstellt wurde | Muss |
+| Messstation entfernen | Benutzern | eine Messsation aus den bestehenden löschen | diese nicht mehr zur Verfügung steht | Die Messstation nicht mehr vorhanden ist | Muss |
+| Importieren | Benutzern | Eigene Messwerte zur Weserdatenbank importiere | diese Informationen hinzugefügt werden | Die Messwerte in der Datenbank liegen und auf der Seite dargestellt werden | Muss |
+| Exportieren | Benutzern | Messwerte als eine Datei ausgeben lasen kann | Eine Datei mit den Informatioen erhalte | Die richtigen Information als Datei ausgegeben werden | Muss |
+| Suche | Benutzern | Nach Stationen und den Messwerten nach verschiedenen Kritieren suchen können | um nach speziellen Informatioen zu schauen | Erfolgreich die Informationen mit den richtigen Filtern ausgegeben werden | Muss |
 
 ## Graphische Benutzerschnittstelle
 
@@ -51,15 +51,13 @@
 - Modellierung der Navigation zwischen den Screens der GUI-Mockups als Zustandsdiagramm
 - Mockups für unterschiedliche Akteure
 
-![](media/mockups.png)
+![]()
 
 
 ## Datenmodell 
 
-- Begriffe im Glossar darstellen-
-
 **ERD**
-![](media/ERD.png)
+![]()
 
 ## Abläufe
 
@@ -114,8 +112,8 @@ Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach 
 ### Fehlerbehandlung 
 
 * Technische Fehler
-  * Fehler 404 Not Found: Ein Account, Termin oder Bauantrag konnte nicht gefunden werden.
-  * Fehler 422 Unprocessable Entity: Das Objekt was übergeben wird kann nicht verarbeitet werden.
+  * Fehler 404 Not Found: ...
+  * Fehler 422 Unprocessable Entity: ...
   * Fehler 500 Internal Server Error: Der Server hat einen Fehler beim Verarbeiten der Anfrage
   * SQL-Error: Ein Fehler im Umgang mit der Datenbank ist aufgetreten.
   * Timeout Error: Zeitüberschreibung
@@ -124,10 +122,10 @@ Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach 
 
 | **Fall** | **Beschreibung** | **Testschritt** | **Ergebnis** | 
 | :------ | :----- | :----- | :----- | 
-| Bauen | Das Projekt muss erfolgreich gebaut und deployt werden | Das Projekt wird gestartet | Das starten wird erfolgreich ausgeführt ohne auftretende Fehler |
+| Bauen | Das Projekt muss erfolgreich gebaut und deployt werden | Das Projekt wird gestartet | Das starten wird erfolgreich ausgeführt ohne auftretenden Fehler |
 | Funktionalität | Alle Routen sowie die Middleware funktionieren | Alle Routen und somit auch die Middleware werden getestet | Erfolgreich oder durchgefallen |
 
-Es muss grundsätzlich bevor jeder Route die Authentifizierung stattfinden um somit zu testen, ob die Berechtigung besteht um die Funktion auszuführen. Durch die Authentifizierung kriegt man außerdem den Benutzer aus der Payload den man für die Route dementsprechend brauch. Danach wird die Funktionalität der Route getestet in der man guckt, ob die Request mit den Userinputs auf richtigkeit validiert werden und somit erfolgreich in die Datenbank eingetragen werden können. Wenn alle diese Punkte erfolgreich abgeschlossen werden ist der Test erfolgreich.
+Es muss grundsätzlich bevor jeder Route die Authentifizierung stattfinden um somit zu testen, ob die Berechtigung besteht um die Funktion auszuführen. Danach wird die Funktionalität der Route getestet in der man guckt, ob die Request mit den Userinputs auf richtigkeit validiert werden und somit erfolgreich in die Datenbank eingetragen werden können. Wenn alle diese Punkte erfolgreich abgeschlossen werden, ist der Test erfolgreich.
 
 ### Verwendete Technologien
 
@@ -137,4 +135,4 @@ Es muss grundsätzlich bevor jeder Route die Authentifizierung stattfinden um so
 * Backend: TypeScript
 * Datenbank: PostgreSQL
 
-* Wichtige Libs: ...
+* Wichtige Libs: Chart.js, MUI, React-leaflet, UI5-Webcomponents.
