@@ -1,7 +1,6 @@
 # Weserdatenbank - Softwarekonzept 
 
-**Autor:** Marc Leenders
-
+**Autoren Weserdatenbank Gruppe 3**: Tim Röckemann, Sascha Hahn, Jan-Ole Timo Löffler, Marc-Justin Leenders 
 
 ## Überblick
 
