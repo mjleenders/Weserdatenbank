@@ -1,11 +1,11 @@
-# Bauamt
+# Weserdatenbank - Softwarekonzept 
 
 **Autor:** Marc Leenders
 
 
 ## Überblick
 
-- Der Microservice Bauamt soll einem Benutzter ermöglichen, alle Tätigkeiten eines Bauamtes digital erledigen zu können.
+- Die Weserdatenbank soll zur Qualitätsüberwachung der Weser dienen zum Schutz des ökosystems, um Schadstoffe frühzeitig zu erkennen.
 - Konzeptionelles Analyseklassendiagramm (logische Darstellung der Konzepte der Anwendungsdomäne)
 
 
@@ -15,8 +15,10 @@
 
 | **Akteur** | **Definition** |
 | :------ | :----- |
+| Admin | Der Administrator mit allen Berechtigungen und Einstellung der Zugriffsberechtigungen |
 | Benutzer | Angemeldeter Benutzer mit grundlegenden Berechtigungen |
-| Mitarbeiter | Sachbearbeiter des Bauamts mit zusätzlichen Berechtigungen für die Bearbeitung und Einsicht |
+| Zuschauer | Angemeldeter Benutzer mit wenigen Berechtigung alleinig zum anschauen der Informationen |
+
 
 ![](media/use-cases.png)
 
@@ -54,7 +56,7 @@
 
 ## Datenmodell 
 
-- Begriffe im Glossar darstellen
+- Begriffe im Glossar darstellen-
 
 **ERD**
 ![](media/ERD.png)
@@ -73,28 +75,18 @@
 
 ## Schnittstellen
 
-- **GET** ("/application") Gibt alle Bauanträge eines Benutzers
-- **GET** ("/appointment") Gibt alle Termine eines Benutzers
-- **GET** ("/application/{id}") Gibt einen bestimmten Bauanträge eines Benutzers
-- **GET** ("/appointment/{id}") Gibt einen bestimmten Termine eines Benutzers
-- **GET** ("/citizen") Gibt alle eingetragenen Benutzers [Testweise]
-- **POST** ("/application/new") Erstellt einen neuen Bauantrag für den Benutzer
-- **POST** ("/appointment/new") Erstellt einen neuen Termin für den Benutzer
-- **PUT** ("/application/edit/{id}") Updatet einen Antrag von einem Benutzer
-- **PUT** ("/appointment/edit/{id}") Updatet einen Termin von einem Benutzer
-- **DELETE** ("/application/{id}/delete") Löscht einen bestimmten Antrag von einem Benutzer
-- **DELETE** ("/appointment/{id}/delete") Löscht einen bestimmten Termin von einem Benutzer
+- **GET** ("/chlroid") Gibt alle Chloride und weitere Ionen wieder.
+- **GET** ("/hdyrodaten") Gibt alle hydrologische Daten wieder.
+- **GET** ("/kenngroeßen") Gibt die kontinuierlichen Kenngrößen wieder.
+- **GET** ("/metalle") Gibt alle Metalle wieder.
+- **GET** ("/naehrstoffe") Gibt alle Nährstoffe wieder.
+- **GET** ("/schadstoffe") Gibt alle Schadstoffe wieder.
+- **GET** ("/summenparameter") Gibt alle Summenparameter wieder.
+- **POST** ("/...") Erstellt ...
+- **PUT** ("/...") Updatet ...
+- **DELETE** ("/...") Löscht ...
 
-### URL
 
-https://smartcity.w-mi.de/Bauamt
-
-### Events
-
-| **Key** | **Beschreibung** | **Payload** | 
-| :------ | :----- | :----- | 
-| service.world | Wird verschickt sobald service.hello erhalten wurde | JWT Secret |
-| service.hello | Wird verschickt sobald ein Service starten | Nachricht |
 
 ## Technische Umsetzung
 
@@ -117,7 +109,7 @@ Hier stellen Sie die Verteilung der Softwarebausteine auf die Rechnerknoten dar.
 
 Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach "unten". Die Softwarearchitektur aus Kapitel "Softwarearchitektur" ist demnach detaillierter als die Systemübersicht aus dem Kapitel "Systemübersicht". Die Schichten können entweder als Ganzes als ein Softwarebaustein angesehen werden. In der Regel werden die Schichten aber noch weiter detailliert und in Softwarebausteine aufgeteilt. 
 
-![](media/artifact.png)
+![]()
 
 ### Fehlerbehandlung 
 
@@ -142,7 +134,7 @@ Es muss grundsätzlich bevor jeder Route die Authentifizierung stattfinden um so
 - Verwendete Technologien (Programmiersprachen, Frameworks, etc.)
 
 * Frontend: React.js Bootstrap und oder Material UI
-* Backend: Python FastApi
-* Datenbank: MySQL
+* Backend: TypeScript
+* Datenbank: PostgreSQL
 
-* Wichtige Libs: Sqlalchemy, Urllib3, Starlette, Pika, Jwt
+* Wichtige Libs: ...
