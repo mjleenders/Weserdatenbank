@@ -36,12 +36,21 @@
 | Metalle | Benutzer | Messdaten zu Metallen wie Blei oder Quecksilber abrufen können | um mögliche Verschmutzungen zu analysieren | Die Messwerte angezeigt werden | Muss |
 | Nährstoffe | Benutzer | Daten zu Nährstoffen wie Stickstoff oder Phosphor abrufen | um den Einfluss auf das Ökosystem zu bewerten | Die Messwerte angezeigt werden | Muss |
 | Summenparameter | Benutzer | Daten wie chemischen und biologischen Sauerstoffbedarf abrufen | um die organische Verschmutzung des Flusses zu analysieren | Die Messwerte angezeigt werden | Muss |
-| Rollenvergabe | Admin | Benutzern eine Rolle zuweisen können | um diese in in ihren Berechtigungen ein zu schränken | Daten angezeigt werden | Muss |
 | Messstation erstellen | Benutzern | eine neue Messstation hinzufügen können | man diese verwenden kann | Eine neue Messstation erstellt wurde | Muss |
 | Messstation entfernen | Benutzern | eine Messsation aus den bestehenden löschen | diese nicht mehr zur Verfügung steht | Die Messstation nicht mehr vorhanden ist | Muss |
 | Importieren | Benutzern | Eigene Messwerte zur Weserdatenbank importiere | diese Informationen hinzugefügt werden | Die Messwerte in der Datenbank liegen und auf der Seite dargestellt werden | Muss |
 | Exportieren | Benutzern | Messwerte als eine Datei ausgeben lasen kann | Eine Datei mit den Informatioen erhalte | Die richtigen Information als Datei ausgegeben werden | Muss |
 | Suche | Benutzern | Nach Stationen und den Messwerten nach verschiedenen Kritieren suchen können | um nach speziellen Informatioen zu schauen | Erfolgreich die Informationen mit den richtigen Filtern ausgegeben werden | Muss |
+|---------------------|------------|----------------------------|-------------------------------|----------------------------|---------|
+| Rollenvergabe | Admin | Benutzern eine Rolle zuweisen können | um diese in in ihren Berechtigungen ein zu schränken | Daten angezeigt werden | Extra |
+| Aktivitäten | Admin | Admin die Aktivitäten von Nutzern nach verfolgen | um Aktionen wie das erstellen/löschen von Messsationen zu sehen | Die Aktionen in einen Auditlog angezeigt werden | Extra |
+| Mobile | Benutzer | Die Webseite für mobile Geräte optimieren | die Ansicht auf dem Handy genauso funktioniert | Alle Informationen auf einen Handy optimal angezeigt werden | Extra |
+| Dashboard | Benutzer | Wichtigen Informationen in einen Dashbaord anzeigen | um einen Überblick zu verschaffen und wichtige Daten einen Ort darstellen | Ein Dashboard angezeigt wird | Extra |
+| Statistiken | Benutzer | Eine Auswertungen der Werte | um Informationen wie Standardabweichungen, Medianen, Quartilen zu berechnen und darzustellen | Diese Werte berechnet und angezeigt werden | Extra |
+| Kommentare | Benutzer | Notizen und Kommentare zu Messwerten oder Stationen hinzufügen | Benutzer ihr Feedback und Notizen geben können | Diese Notizen/Kommentare gespeichert und zu den Punkten angezeigt werden | Extra |
+| Export-Erweitert | Benutzer | die Daten in weiteren Formaten exportiert werden können | man die Möglichkeit auf Formate wie JSON,PDF oder XML hat | der Export erfolgreich für diese Formate funktioniert | Extra |
+
+
 
 ## Graphische Benutzerschnittstelle
 
@@ -96,15 +105,22 @@ Hier stellen Sie die Verteilung der Softwarebausteine auf die Rechnerknoten dar.
 
 * Server
   * Web-Schicht
+    - HTTP
+    - NestJs with Express Routing
   * Logik-Schicht
+    - NodeJs
   * Persistenz-Schicht
+    - PostgreSQL Datenbank
 
 * Client
   * View-Schicht
+    - HTML
+    - CSS
   * Logik-Schicht
+    - Javascript React.js 
   * Kommunikation-Schicht
+    - HTTP
 
-Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach "unten". Die Softwarearchitektur aus Kapitel "Softwarearchitektur" ist demnach detaillierter als die Systemübersicht aus dem Kapitel "Systemübersicht". Die Schichten können entweder als Ganzes als ein Softwarebaustein angesehen werden. In der Regel werden die Schichten aber noch weiter detailliert und in Softwarebausteine aufgeteilt. 
 
 ![]()
 
